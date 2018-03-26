@@ -7,7 +7,8 @@ Account::Account( int initial_deposit ) :
 _accountIndex(Account::_nbAccounts), 
 _amount(initial_deposit), 
 _nbDeposits(0), 
-_nbWithdrawals(0) {
+_nbWithdrawals(0),
+_totalMemberChecks(0) {
 
 	Account::_nbAccounts += 1;
 	Account::_totalAmount += initial_deposit;
@@ -38,6 +39,11 @@ void	Account::_displayTimestamp( void ) {
 
 int	Account::checkAmount( void ) const {
 
+	// Bonus: count the number of calls for non-member and member variables
+	Account::_totalChecks += 1;
+	Account *cheat = const_cast<Account *> (this);
+	cheat->_totalMemberChecks += 1;
+	std::cout << "This function has been called " << Account::_totalChecks << " times in total and " << this->totalMemberChecks << " times in this instance" << std::endl;
 	return this->_amount;
 
 }
@@ -132,3 +138,4 @@ int	Account::_nbAccounts = 0;
 int	Account::_totalAmount = 0;
 int	Account::_totalNbDeposits = 0;
 int	Account::_totalNbWithdrawals = 0;
+int	Account::_totalChecks = 0;

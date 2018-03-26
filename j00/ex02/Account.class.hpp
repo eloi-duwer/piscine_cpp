@@ -45,8 +45,13 @@ private:
 	int				_amount;
 	int				_nbDeposits;
 	int				_nbWithdrawals;
-
 	Account( void );
+
+	// Added for the bonus: count the number of times checkAmount was called
+	static int	_totalChecks;
+	//But it's too easy with a non-member variable, so let's do it with a member one :p
+	int		_totalMemberChecks;
+	
 
 };
 
