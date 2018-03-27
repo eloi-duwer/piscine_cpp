@@ -35,6 +35,8 @@ void	Account::_displayTimestamp( void ) {
 		"_" << current->tm_hour + 1 << current->tm_min \
 		<< current->tm_sec << "] ";
 
+	//To get the same timestamps
+	//std::cout << "[20150406_153629] ";
 }
 
 int	Account::checkAmount( void ) const {
@@ -43,7 +45,11 @@ int	Account::checkAmount( void ) const {
 	Account::_totalChecks += 1;
 	Account *cheat = const_cast<Account *> (this);
 	cheat->_totalMemberChecks += 1;
-	std::cout << "This function has been called " << Account::_totalChecks << " times in total and " << this->totalMemberChecks << " times in this instance" << std::endl;
+	//Print infos below makes the 2 outputs differ, decomment to get a message
+	//each time this function is called.
+	/*std::cout << "This function has been called " << \
+		Account::_totalChecks << " times in total and " \
+		<< this->_totalMemberChecks << " times in this instance" << std::endl;*/
 	return this->_amount;
 
 }
@@ -100,7 +106,7 @@ void	Account::makeDeposit( int deposit ) {
 		";p_amount:" << this->_amount << \
 		";deposit:" << deposit;
 	
-	this->_amount += deposit;	
+	this->_amount += deposit;
 	this->_nbDeposits += 1;
 	Account::_totalAmount += deposit;
 	Account::_totalNbDeposits += 1;
