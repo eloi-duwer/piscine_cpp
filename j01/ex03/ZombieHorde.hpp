@@ -6,7 +6,7 @@
 /*   By: eduwer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 15:47:43 by eduwer            #+#    #+#             */
-/*   Updated: 2018/03/27 16:40:43 by eduwer           ###   ########.fr       */
+/*   Updated: 2018/03/27 17:11:57 by eduwer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,11 @@ class ZombieHorde {
 	public:
 		ZombieHorde( int N );
 		~ZombieHorde();
+		void	announce( void );
 
 	private:
-		Zombie *_zombies;
+		Zombie	*_zombies;
+		int		_nbZombies;
 };
 
 # endif

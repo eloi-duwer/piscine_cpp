@@ -6,22 +6,31 @@
 /*   By: eduwer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 16:23:31 by eduwer            #+#    #+#             */
-/*   Updated: 2018/03/27 16:34:30 by eduwer           ###   ########.fr       */
+/*   Updated: 2018/03/27 17:21:29 by eduwer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-#include "ZombieEvent.hpp"
+#include "ZombieHorde.hpp"
 #include <iostream>
+#include <cstdlib>
+#include <ctime>
+
+ZombieHorde *createHorde(int n) {
+
+	ZombieHorde *zomb = new ZombieHorde(n);
+	return zomb;
+
+}
 
 int main() {
 
-	ZombieEvent zombies;
-	zombies.randomChump(4);
-	zombies.setZombieType(std::string("Walker"));
-	Zombie *alan = zombies.newZombie(std::string("Alan"));
-	alan->announce();
-	zombies.randomChump(5);
-	zombies.randomChump(8);
-	delete alan;
+	std::srand(std::time(NULL));
+	ZombieHorde zombies(5);
+	zombies.announce();
+	ZombieHorde *moreZombies = createHorde(3);
+	moreZombies->announce();
+	delete moreZombies;
+	return 0;
+
 }

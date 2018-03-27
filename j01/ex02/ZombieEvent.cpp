@@ -6,13 +6,13 @@
 /*   By: eduwer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 16:02:06 by eduwer            #+#    #+#             */
-/*   Updated: 2018/03/27 16:30:08 by eduwer           ###   ########.fr       */
+/*   Updated: 2018/03/27 17:03:58 by eduwer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 #include "ZombieEvent.hpp"
-#include <istream>
+#include <iostream>
 #include <ctime>
 #include <cstdlib>
 

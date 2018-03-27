@@ -6,7 +6,7 @@
 /*   By: eduwer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 15:38:29 by eduwer            #+#    #+#             */
-/*   Updated: 2018/03/27 16:30:20 by eduwer           ###   ########.fr       */
+/*   Updated: 2018/03/27 17:01:31 by eduwer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ class Zombie {
 
 	public:
 		Zombie( std::string name, std::string type);
+		Zombie( void );
 		~Zombie( void );
 		void	announce( void ) const;
 	private:
