@@ -41,4 +41,5 @@ void	Human::action(std::string const & action_name, std::string const & target) 
 		}
 		++i;
 	}
+	std::cout << "The action name " << action_name << " is not supported yet" << std::endl;
 }
