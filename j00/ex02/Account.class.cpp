@@ -1,6 +1,6 @@
 #include <iostream>
 #include <ctime>
-#include  <time.h>
+#include <time.h>
 #include "Account.class.hpp"
 
 Account::Account( int initial_deposit ) : 
