@@ -1,11 +1,13 @@
 #ifndef _FIXED_HPP_
 # define _FIXED_HPP_
 
+#include <iostream>
+
 class Fixed {
 
 public:
 	Fixed( void );
-	Fixed (Fixed const &nb);
+	Fixed( Fixed const &nb );
 
 	~Fixed( void );
 
@@ -15,8 +17,8 @@ public:
 	Fixed	&operator=( Fixed const& nb );	
 
 private:
-	int	_nb;
-	static const int _binaryPoint;
+	int			_nb;
+	static const int	_binaryPoint;
 
 };
 
