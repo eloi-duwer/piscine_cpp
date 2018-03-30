@@ -9,7 +9,7 @@ class Victim {
 public:
 	Victim(std::string const &name="Jean-eudes" );
 	Victim( Victim const &src );
-	~Victim( void );
+	virtual ~Victim( void );
 
 	Victim		&operator=( Victim const &src );
 
