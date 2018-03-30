@@ -6,7 +6,7 @@
 /*   By: eduwer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/29 10:46:45 by eduwer            #+#    #+#             */
-/*   Updated: 2018/03/29 13:59:41 by eduwer           ###   ########.fr       */
+/*   Updated: 2018/03/30 22:27:32 by eduwer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <ostream>
 #include "ClapTrap.hpp"
 #include "FragTrap.hpp"
-#include "ScavTtrap.hpp"
+#include "ScavTrap.hpp"
 
 class NinjaTrap : public ClapTrap {
 
@@ -28,11 +28,10 @@ class NinjaTrap : public ClapTrap {
 
 		NinjaTrap &operator=( NinjaTrap const &src );
 
-		/*void	ninjaShoebox( Claptrap	&target );
-		void	ninjaShoebox( FragTrap	&target );
-		void	ninjaShoebox( ScavTrap	&target );
-		void	ninjaShoebox( NinjaTrap	&target );
-		*/
+		virtual void	ninjaShoebox( ClapTrap	&target );
+		virtual void	ninjaShoebox( FragTrap	&target );
+		virtual void	ninjaShoebox( ScavTrap	&target );
+		virtual void	ninjaShoebox( NinjaTrap	&target );
 };
 
 #endif
