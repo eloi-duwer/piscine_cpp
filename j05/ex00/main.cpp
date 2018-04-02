@@ -6,7 +6,7 @@
 /*   By: eduwer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 13:35:11 by eduwer            #+#    #+#             */
-/*   Updated: 2018/04/02 14:08:02 by eduwer           ###   ########.fr       */
+/*   Updated: 2018/04/02 14:10:14 by eduwer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ int main( void ) {
 
 		Bureaucrat::GradeTooHighException e2(e);
 		Bureaucrat::GradeTooHighException e3 = e;
+		Bureaucrat::GradeTooHighException e4;
 
 		std::cout << e3.what() << std::endl;
 	}
