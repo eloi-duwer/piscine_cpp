@@ -6,7 +6,7 @@
 /*   By: eduwer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/29 10:57:50 by eduwer            #+#    #+#             */
-/*   Updated: 2018/03/29 14:04:11 by eduwer           ###   ########.fr       */
+/*   Updated: 2018/03/30 22:33:23 by eduwer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,14 @@
 ClapTrap::ClapTrap( std::string name, int hp, int maxHp, int level, int meleeAttackDmg, int rangedAttackDmg, int armorReduction, int energy, int maxEnergy ) :
 _hp(hp),
 _maxHp(maxHp),
-_energy(energy),
-_maxEnergy(maxEnergy),
 _level(level),
 _name(name),
 _meleeAttackDmg(meleeAttackDmg),
 _rangedAttackDmg(rangedAttackDmg),
-_armorReduction(armorReduction) {
+_armorReduction(armorReduction),
+_energy(energy),
+_maxEnergy(maxEnergy)
+{
 
 	std::cout << "ClapTrap instance created: " << this->_name << std::endl;
 	std::srand(std::time(NULL));
@@ -35,13 +36,13 @@ _armorReduction(armorReduction) {
 ClapTrap::ClapTrap( ClapTrap &src) :
 _hp(src._hp),
 _maxHp(src._maxHp),
-_energy(src._energy),
-_maxEnergy(src._maxEnergy),
 _level(src._level),
 _name(src._name),
 _meleeAttackDmg(src._meleeAttackDmg),
 _rangedAttackDmg(src._rangedAttackDmg),
-_armorReduction(src._armorReduction) {
+_armorReduction(src._armorReduction),
+_energy(src._energy),
+_maxEnergy(src._maxEnergy) {
 
 	std::cout << "ClapTrap instance named " << this->_name << " copied" << std::endl;
 

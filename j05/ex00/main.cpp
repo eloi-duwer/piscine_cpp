@@ -6,7 +6,7 @@
 /*   By: eduwer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 13:35:11 by eduwer            #+#    #+#             */
-/*   Updated: 2018/04/02 14:10:14 by eduwer           ###   ########.fr       */
+/*   Updated: 2018/04/02 19:38:51 by eduwer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,13 @@ int main( void ) {
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl << test;
 	}
+
+	Bureaucrat	test1(15, "Boby");
+	Bureaucrat	test2;
+
+	test2 = test1;
+
+	Bureaucrat test3(test1);
 
 	return 0;
 }

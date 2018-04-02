@@ -6,7 +6,7 @@
 /*   By: eduwer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/03/27 18:32:00 by eduwer            #+#    #+#             */
-/*   Updated: 2018/03/27 18:38:44 by eduwer           ###   ########.fr       */
+/*   Updated: 2018/03/27 19:40:03 by eduwer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,11 @@ class Weapon {
 		~Weapon( void );
 		void				setType( std::string type );
 		const	std::string	&getType( void );
+        :q
+
+
+:q
+exit
 
 	private:
 		std::string type;
