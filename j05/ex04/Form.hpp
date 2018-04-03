@@ -6,7 +6,7 @@
 /*   By: eduwer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 14:13:42 by eduwer            #+#    #+#             */
-/*   Updated: 2018/04/02 19:50:07 by eduwer           ###   ########.fr       */
+/*   Updated: 2018/04/03 23:17:06 by eduwer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ class Form {
 		public:
 			GradeTooLowException( std::string exception = "Unknown GradeTooLowException" );
 			GradeTooLowException( GradeTooLowException const &src);
-			~GradeTooLowException( void ) _NOEXCEPT;
+			virtual ~GradeTooLowException( void ) _NOEXCEPT;
 
 			GradeTooLowException	&operator=( GradeTooLowException const &src );
 
@@ -63,7 +63,7 @@ class Form {
 		public:
 			GradeTooHighException( std::string exception = "Unknown GradeTooHighException" );
 			GradeTooHighException( GradeTooHighException const &src );
-			~GradeTooHighException( void ) _NOEXCEPT;
+			virtual ~GradeTooHighException( void ) _NOEXCEPT;
 
 			GradeTooHighException	&operator=( GradeTooHighException const &src );
 

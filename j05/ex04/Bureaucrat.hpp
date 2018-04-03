@@ -6,7 +6,7 @@
 /*   By: eduwer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 12:51:24 by eduwer            #+#    #+#             */
-/*   Updated: 2018/04/02 19:11:51 by eduwer           ###   ########.fr       */
+/*   Updated: 2018/04/03 23:16:36 by eduwer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Bureaucrat {
 	public:
 		Bureaucrat( int grade = 150, std::string name = "Roger" );
 		Bureaucrat( Bureaucrat const &src );
-		~Bureaucrat( void );
+		virtual ~Bureaucrat( void );
 
 		Bureaucrat	&operator=( Bureaucrat const &src );
 		Bureaucrat	&operator++( void );

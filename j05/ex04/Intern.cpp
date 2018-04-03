@@ -6,7 +6,7 @@
 /*   By: eduwer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 20:06:32 by eduwer            #+#    #+#             */
-/*   Updated: 2018/04/02 20:21:55 by eduwer           ###   ########.fr       */
+/*   Updated: 2018/04/03 23:50:42 by eduwer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,13 @@ Form *Intern::makeForm(std::string const &form, std::string const &target) const
 	else if (form.compare(_formNames[2]) == 0)
 		formulaire = new ShrubberyCreationForm(target);
 	if (formulaire == NULL)
-		std::cout << "No matching form request name: " << form << std::endl;
+		throw Intern::NoMatchingRequestForm();
 	else
 		std::cout << "Intern creates " << form << " Form (" << *formulaire << ")" << std::endl;
 	return formulaire;
 
+}
+
+const char *Intern::NoMatchingRequestForm::what( void ) const throw() {
+	return ("There is no matching request form. You can make a \"robotomy request\", a \"presidential pardon request\", or a \"shrubbery request\"");
 }

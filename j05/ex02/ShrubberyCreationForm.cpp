@@ -6,7 +6,7 @@
 /*   By: eduwer <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/02 17:40:40 by eduwer            #+#    #+#             */
-/*   Updated: 2018/04/02 19:35:32 by eduwer           ###   ########.fr       */
+/*   Updated: 2018/04/03 23:10:36 by eduwer           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,13 @@ void	ShrubberyCreationForm::execute( void ) const {
 	while ( i < 3) {
 		file << "      _-_" << std::endl;
 		file << "   /~~   ~~\\" << std::endl;
-		file << "/~~         ~~\\" << std::endl;
-		file << " {               }" << std::endl;
-		file << "  \\  _-     -_  /" << std::endl;
-		file << "    ~  \\\\ //  ~" << std::endl;
-		file << " _- -   | | _- _" << std::endl;
-		file << "   _ -  | |   -_" << std::endl;
-		file << "       // \\\\" << std::endl << std::endl;
+		file << " /~~         ~~\\" << std::endl;
+		file << "{               }" << std::endl;
+		file << "\\  _-     -_  /" << std::endl;
+		file << "   ~  \\\\ //  ~" << std::endl;
+		file << "_- -   | | _- _" << std::endl;
+		file << "  _ -  | |   -_" << std::endl;
+		file << "      // \\\\" << std::endl << std::endl;
 		++i;
 	}
 	file.close();
