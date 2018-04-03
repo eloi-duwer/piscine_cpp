@@ -15,12 +15,12 @@ void	display_char(double nb) {
 	std::cout << std::endl;
 }
 
-void	display_int(float nb) {
+void	display_int(double nb) {
 	std::cout << "int: ";
-	if (nb < static_cast<float>(std::numeric_limits<int>::min()) || nb > static_cast<float>(std::numeric_limits<int>::max()))
-		std::cout << "out of range";
-	else if (nb == INFINITY || nb == -INFINITY || nb != nb)
+	if (nb == INFINITY || nb == -INFINITY || nb != nb)
 		std::cout << "impossible";
+	else if (nb < static_cast<double>(std::numeric_limits<int>::min()) || nb > static_cast<double>(std::numeric_limits<int>::max()))
+		std::cout << "out of range";
 	else
 		std::cout << static_cast<int>(nb);
 	std::cout << std::endl;

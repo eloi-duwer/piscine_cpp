@@ -70,14 +70,19 @@ int main() {
 
 	srand(time(NULL));
 
-	void *data = serialize();
-	Data *ret = deserialize( data );
+	void	*data;
+	Data	*ret;
+	int		i = 0;
 
-	std::cout << "Deserialized data:" << std::endl \
-	<< ret->s1 << std::endl \
-	<< ret->n << std::endl \
-	<< ret->s2 << std::endl;
-	
-	delete reinterpret_cast<char *>(data);
-	delete ret;
+	while (i < 5) {
+		data = serialize();
+		ret = deserialize( data );
+		std::cout << "Deserialized data:" << std::endl \
+			<< ret->s1 << std::endl \
+			<< ret->n << std::endl \
+			<< ret->s2 << std::endl << std::endl;
+		delete reinterpret_cast<char *>(data);
+		delete ret;
+		++i;
+	}
 }

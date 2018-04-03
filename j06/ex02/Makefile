@@ -1,2 +1,27 @@
-all:
-	clang++ -o dynamic_cast -Wall -Wextra -Werror -std=c++98 main.cpp
+NAME = serialization
+
+CXX = clang++
+
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
+
+SRCS = main.cpp \
+	   A.cpp \
+	   B.cpp \
+	   C.cpp
+
+SRCF = ./
+
+OBJS = $(addprefix $(SRCF), $(SRCS:.cpp=.o))
+
+all: $(NAME)
+
+clean:
+	rm -rf $(OBJS)
+
+fclean: clean
+	rm -rf $(NAME)
+
+$(NAME): $(OBJS)
+	$(CXX) -o $(NAME) $(OBJS) $(CXXFLAGS)
+
+re: fclean all
