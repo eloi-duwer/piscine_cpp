@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include "iter.tpp"
+#include "iter.cpp"
 
 template<typename T>
 void times_two(T &x) {
